@@ -19,7 +19,7 @@ function eventListeners(e) {
 function addTodo(e) {
 	let newTodo = todoInput.value;
 	let todos = getTodoFromStorage();
-	if (newTodo === '') {
+	if (newTodo.trim() === '') {
 		showAlert('danger', 'Bir Todo girin:(');
 	} else if (todos.indexOf(newTodo) === 0) {
 		showAlert('danger', 'Bu Todo Zaten Kayıtlı');
